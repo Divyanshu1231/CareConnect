@@ -1,0 +1,196 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#0F172A"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title -->
+        <TextView
+            android:text="24×7 Healthcare"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Top Doctors 👨‍⚕️"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#F59E0B"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- GRID -->
+        <GridLayout
+            android:columnCount="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- FAMILY -->
+            <LinearLayout
+                android:id="@+id/family"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:padding="12dp"
+                android:gravity="center"
+                android:background="@drawable/card_bg"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_family"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Family Physician"
+                    android:textColor="#FACC15"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- DIETICIAN -->
+            <LinearLayout
+                android:id="@+id/dietician"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:padding="12dp"
+                android:gravity="center"
+                android:background="@drawable/card_bg"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_diet"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dietician"
+                    android:textColor="#10B981"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- DENTIST -->
+            <LinearLayout
+                android:id="@+id/dentist"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:padding="12dp"
+                android:gravity="center"
+                android:background="@drawable/card_bg"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_dentist"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dentist"
+                    android:textColor="#F59E0B"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- SURGEON -->
+            <LinearLayout
+                android:id="@+id/surgeon"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:padding="12dp"
+                android:gravity="center"
+                android:background="@drawable/card_bg"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_surgeon"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Surgeon"
+                    android:textColor="#EF4444"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- CARDIO -->
+            <LinearLayout
+                android:id="@+id/cardio"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:padding="12dp"
+                android:gravity="center"
+                android:background="@drawable/card_bg"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_cardio"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cardiologist"
+                    android:textColor="#EC4899"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- BACK -->
+            <LinearLayout
+                android:id="@+id/back"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:padding="12dp"
+                android:gravity="center"
+                android:background="@drawable/card_bg"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_back"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:textColor="#6366F1"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        </GridLayout>
+
+    </LinearLayout>
+</ScrollView>

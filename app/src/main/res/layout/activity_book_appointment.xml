@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#0F172A"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Book Appointment 📅"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Doctor Name -->
+    <TextView
+        android:id="@+id/doctorName"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Date -->
+    <EditText
+        android:id="@+id/date"
+        android:hint="Select Date"
+        android:background="@drawable/edit_bg"
+        android:padding="14dp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Time -->
+    <EditText
+        android:id="@+id/time"
+        android:hint="Select Time"
+        android:background="@drawable/edit_bg"
+        android:padding="14dp"
+        android:layout_marginBottom="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Button -->
+    <Button
+        android:id="@+id/bookBtn"
+        android:text="Confirm Appointment"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#3B82F6"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+</LinearLayout>

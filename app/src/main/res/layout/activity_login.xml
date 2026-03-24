@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#0F172A"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:text="Welcome Back 👋"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"/>
+
+    <!-- Card UI -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/card_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_margin="20dp">
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/email"
+            android:hint="Email"
+            android:textColor="#000"
+            android:background="@drawable/edit_bg"
+            android:padding="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/password"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="#000"
+            android:background="@drawable/edit_bg"
+            android:padding="14dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Forgot -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/forgotText"
+            android:text="Forgot Password?"
+            android:textColor="#3B82F6"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/loginBtn"
+            android:text="Login"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#3B82F6"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <!-- Register Redirect -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/registerText"
+            android:text="Don't have an account? Register"
+            android:textColor="#94A3B8"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

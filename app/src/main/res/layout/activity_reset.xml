@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#0F172A"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="24dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset Password 🔐"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create a new secure password"
+            android:textColor="#94A3B8"
+            android:textSize="14sp"
+            android:layout_marginBottom="25dp"/>
+
+        <!-- Card -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/card_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- New Password -->
+            <EditText
+                android:id="@+id/newPassword"
+                android:hint="New Password"
+                android:inputType="textPassword"
+                android:textColor="#000"
+                android:background="@drawable/edit_bg"
+                android:padding="14dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- Confirm Password -->
+            <EditText
+                android:id="@+id/confirmPassword"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:textColor="#000"
+                android:background="@drawable/edit_bg"
+                android:padding="14dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- Update Button -->
+            <Button
+                android:id="@+id/updateBtn"
+                android:text="Update Password"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#3B82F6"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

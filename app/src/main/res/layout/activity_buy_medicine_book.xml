@@ -1,0 +1,65 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#0F172A"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title -->
+        <TextView
+            android:text="Order Summary 🧾"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Address -->
+        <EditText
+            android:id="@+id/address"
+            android:hint="Enter Delivery Address"
+            android:background="@drawable/edit_bg"
+            android:padding="14dp"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Phone -->
+        <EditText
+            android:id="@+id/phone"
+            android:hint="Enter Phone Number"
+            android:inputType="phone"
+            android:background="@drawable/edit_bg"
+            android:padding="14dp"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Total -->
+        <TextView
+            android:id="@+id/total"
+            android:text="Total: ₹0"
+            android:textSize="18sp"
+            android:textColor="#3B82F6"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Place Order -->
+        <Button
+            android:id="@+id/orderBtn"
+            android:text="Place Order"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#3B82F6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

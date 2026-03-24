@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/bg">
+
+    <!-- 🔥 LOGO WITH CARD EFFECT -->
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:gravity="center"
+        android:background="@drawable/logo_bg"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_medical"
+            android:tint="#3B82F6"
+            tools:ignore="UseAppTint" />
+    </LinearLayout>
+
+    <!-- 🔥 APP NAME -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MediVision"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:letterSpacing="0.05"
+        android:layout_marginBottom="8dp"
+        tools:ignore="HardcodedText" />
+
+    <!-- 🔥 TAGLINE -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Smart Healthcare Partner"
+        android:textColor="#94A3B8"
+        android:textSize="14sp"
+        android:layout_marginBottom="30dp"/>
+
+    <!-- 🔥 LOADING INDICATOR -->
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:indeterminateTint="#3B82F6"/>
+
+</LinearLayout>
