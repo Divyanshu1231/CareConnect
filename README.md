@@ -45,11 +45,6 @@ CareConnect is a modern Android healthcare application designed to simplify medi
 
 ---
 
-## 📱 Screenshots
-
-(Add your app screenshots here)
-
----
 
 ## ⚙️ Installation
 
