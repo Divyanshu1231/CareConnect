@@ -1,21 +1,27 @@
 package com.example.careconnect.ui.adapter;
 
-import android.content.*;
-import android.view.*;
-import android.widget.*;
+import android.content.Context;
+import android.content.Intent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.careconnect.R;
 import com.example.careconnect.model.Doctor;
+import com.example.careconnect.ui.activity.Appointment.BookAppointmentActivity;
 import com.example.careconnect.ui.activity.Doctor.DoctorDetailsActivity;
 
 import java.util.List;
 
 public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.VH> {
 
-    List<Doctor> list;
-    Context context;
+    private final List<Doctor> list;
+    private final Context context;
 
     public DoctorAdapter(Context context, List<Doctor> list) {
         this.context = context;
@@ -23,31 +29,52 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.VH> {
     }
 
     @Override
-    public VH onCreateViewHolder(ViewGroup p, int v) {
-        View view = LayoutInflater.from(context)
-                .inflate(R.layout.item_doctor, p, false);
+    public VH onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.item_doctor, parent, false);
         return new VH(view);
     }
 
     @Override
-    public void onBindViewHolder(VH h, int i) {
+    public void onBindViewHolder(VH holder, int position) {
+        Doctor doctor = list.get(position);
 
-        Doctor d = list.get(i);
+        holder.name.setText(doctor.name);
+        holder.special.setText(doctor.specialization);
+        holder.hospital.setText(doctor.hospital);
+        holder.fee.setText("\u20b9" + doctor.fee);
 
-        h.name.setText(d.name);
-        h.special.setText(d.specialization);
-        h.hospital.setText(d.hospital);
-        h.fee.setText("₹" + d.fee);
+        if (holder.experience != null) {
+            holder.experience.setText(doctor.experience + " exp");
+        }
 
-        // 🔥 CLICK → DETAILS
-        h.itemView.setOnClickListener(v -> {
+        if (holder.rating != null) {
+            holder.rating.setText("\u2605 " + doctor.rating);
+        }
+
+        if (holder.doctorImage != null && doctor.image != 0) {
+            holder.doctorImage.setImageResource(doctor.image);
+        }
+
+        holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, DoctorDetailsActivity.class);
-            intent.putExtra("name", d.name);
-            intent.putExtra("special", d.specialization);
-            intent.putExtra("hospital", d.hospital);
-            intent.putExtra("fee", d.fee);
+            intent.putExtra("name", doctor.name);
+            intent.putExtra("special", doctor.specialization);
+            intent.putExtra("hospital", doctor.hospital);
+            intent.putExtra("fee", doctor.fee);
+            intent.putExtra("experience", doctor.experience);
+            intent.putExtra("rating", doctor.rating);
+            intent.putExtra("image", doctor.image);
             context.startActivity(intent);
         });
+
+        if (holder.bookBtn != null) {
+            holder.bookBtn.setOnClickListener(v -> {
+                Intent intent = new Intent(context, BookAppointmentActivity.class);
+                intent.putExtra("name", doctor.name);
+                intent.putExtra("fee", doctor.fee);
+                context.startActivity(intent);
+            });
+        }
     }
 
     @Override
@@ -55,16 +82,27 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.VH> {
         return list.size();
     }
 
-    class VH extends RecyclerView.ViewHolder {
+    static class VH extends RecyclerView.ViewHolder {
 
-        TextView name, special, hospital, fee;
+        TextView name;
+        TextView special;
+        TextView hospital;
+        TextView fee;
+        TextView experience;
+        TextView rating;
+        Button bookBtn;
+        ImageView doctorImage;
 
-        VH(View v) {
-            super(v);
-            name = v.findViewById(R.id.name);
-            special = v.findViewById(R.id.special);
-            hospital = v.findViewById(R.id.hospital);
-            fee = v.findViewById(R.id.fee);
+        VH(View view) {
+            super(view);
+            name = view.findViewById(R.id.name);
+            special = view.findViewById(R.id.special);
+            hospital = view.findViewById(R.id.hospital);
+            fee = view.findViewById(R.id.fee);
+            experience = view.findViewById(R.id.experience);
+            rating = view.findViewById(R.id.rating);
+            bookBtn = view.findViewById(R.id.bookBtn);
+            doctorImage = view.findViewById(R.id.doctorImage);
         }
     }
 }
